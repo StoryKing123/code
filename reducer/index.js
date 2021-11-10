@@ -1,5 +1,5 @@
 
-function createStore(reducer,initState){
+ function createStore(reducer){
     let state;
     let listeners = [];
 
@@ -26,3 +26,4 @@ function createStore(reducer,initState){
     }
     return store;
 }
+export {createStore}
