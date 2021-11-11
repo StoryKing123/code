@@ -1,29 +1,28 @@
 
- function createStore(reducer){
+
+export const createStore=(reducer)=>{
+    
+    
+    const subscribeCallbackArr = []
+
     let state;
-    let listeners = [];
-
-    function subscribe(fn){
-        listeners.push(fn)
-    }
-    function dispatch(action){
+    const dispatch = (action)=>{
         state = reducer(state,action)
-        for(let i =0;i<listeners.length;i++){
-            const listener = listeners[i]
-            listener()
-        }        
+        for (let i = 0; i <subscribeCallbackArr.length; i++) {
+            subscribeCallbackArr[i]()
+        }
     }
-    function getState(){
-
-        return state;
+    const getState = ()=>{
+        return state
     }
-
-
+    const subscribe = (fn)=>{
+        subscribeCallbackArr.push(fn)
+    }
     const store = {
-        subscribe,
         dispatch,
-        getState
+        getState,
+        subscribe
     }
-    return store;
+    return store
+
 }
-export {createStore}
