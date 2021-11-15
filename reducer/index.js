@@ -23,16 +23,17 @@ export const createStore = (reducer) => {
 };
 
 export const combineReducers = (reducerMap) => {
-    const reducerKeys = Object.keys(reducerMap);
-
+    const reducerKeys = Object.keys(reducerMap)
     const reducer = (state={},action)=>{
-        const newState = {}
-        const key = reducerKeys[i]
-        const currentReducer = reducerMap[key]
-        const prevState = state[key]
-        newState[key] = currentReducer(prevState,action)
-
-        return newState;
+        let newState = {}
+        for(let i =0;i<reducerKeys.length;i++){
+            // console.log('for')
+            let key  = reducerKeys[i]
+            let currentReducer=  reducerMap[key]
+            let prevState = state[key]
+            newState[key] = currentReducer(prevState,action)
+        }
+        return newState
     }
     return reducer;
 };
