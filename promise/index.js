@@ -1,0 +1,6 @@
+
+
+class Promise{
+    
+    constructor(){}
+}

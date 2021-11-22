@@ -1,20 +1,24 @@
 {
   "name": "test-code",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test promise": "promises-aplus-tests promise/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StoryKing123/code.git"
   },
-  "type":"module",
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/StoryKing123/code/issues"
   },
-  "homepage": "https://github.com/StoryKing123/code#readme"
+  "homepage": "https://github.com/StoryKing123/code#readme",
+  "dependencies": {
+    "promises-aplus-tests": "^2.1.2"
+  }
 }
