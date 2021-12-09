@@ -1,0 +1,67 @@
+.play-list-item {
+  width: 200px;
+  height: 200px;
+}
+.container {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  /* width: 200px;
+  height: 200px; */
+}
+.background {
+  background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201711%2F18%2F20171118005409_fKAwj.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1641609643&t=6659f91682acd81118cb99a0aef9d963);
+  background-size: 100% auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.container:hover .play {
+  opacity: 1;
+}
+.count {
+  /* font-weight: lighter; */
+  font-size: 8px;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  color: #fff;
+}
+
+.play {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 5px;
+  right: 5px;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.play::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.list-name {
+  word-break: break-all;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  cursor: pointer;
+}

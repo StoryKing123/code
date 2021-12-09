@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/StoryKing123/code#readme",
   "dependencies": {
-    "promises-aplus-tests": "^2.1.2"
+    "promises-aplus-tests": "^2.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
